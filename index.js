@@ -101,7 +101,7 @@ module.exports = function arrayToTree(data, options) {
 
   var grouped = groupByParents(deepClone(data), options);
 
-  Object.keys(grouped).map(x => grouped[x] = grouped[x].sort((a, b) => parseFloat(a.position) > parseFloat(b.position)))
+  Object.keys(grouped).map(x => grouped[x] = grouped[x].sort((a, b) => parseFloat(a.position) - parseFloat(b.position)))
   
   return createTree(
     grouped,
