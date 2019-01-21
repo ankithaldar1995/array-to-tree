@@ -103,7 +103,7 @@ module.exports = function arrayToTree(data, options) {
 
   Object.keys(grouped).map(x => grouped[x] = grouped[x].sort((a, b) => a.position > b.position))
   
-  console.log("HAHAHAHAHAH", grouped)
+  console.log("HAHAHAHAHAH", JSON.stringify(grouped))
 
   return createTree(
     grouped,
